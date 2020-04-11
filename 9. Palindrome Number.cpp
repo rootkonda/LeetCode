@@ -1,4 +1,6 @@
 /** 
+   Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+   
    Same as Reverse Integer problem. Just reverse the digits and compare the final value with given number. **/
 class Solution {
 public:
