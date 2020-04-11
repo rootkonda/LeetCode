@@ -1,4 +1,10 @@
 /**
+   Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+   You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+   Approach:
+   
    For each element, check if it exists in the map. If it exists, return the appropriate indices. 
    Otherwise, subtract the element from target sum and store the compliment in map  **/
 
