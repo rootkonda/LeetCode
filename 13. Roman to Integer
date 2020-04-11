@@ -1,5 +1,5 @@
 /** 
-  Store the Roman Numerals and their integer values. Just Follow the rules in question and continue forming the number**/
+  Store the Roman Numerals and their integer values. Just Follow the rules in question and continue forming the number **/
   
 class Solution {
 public:
