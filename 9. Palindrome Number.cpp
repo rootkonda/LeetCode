@@ -1,5 +1,5 @@
 /** 
-   Same as Reverse Integer problem. Just reverse the digits and compare the final value with given number.**/
+   Same as Reverse Integer problem. Just reverse the digits and compare the final value with given number. **/
 class Solution {
 public:
     bool isPalindrome(long long x) 
