@@ -1,0 +1,21 @@
+/**
+  Always there is atleast one unique element in the array. So keep a pointer from second location of array and start comparing
+  pairs of elements. If both are different then, copy that element into the location pointed by moving pointer. **/
+ 
+class Solution 
+{
+public:
+    int removeDuplicates(vector<int>& nums) 
+    {
+        if(nums.size()==0)
+            return 0;
+        int count=1;
+        int len=nums.size();
+        for(int i=0;i<len-1;i++)
+        {
+            if(nums[i]!=nums[i+1])
+                nums[count++]=nums[i+1];
+        }
+        return count;
+    }
+};
