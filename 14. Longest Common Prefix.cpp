@@ -1,4 +1,10 @@
 /**
+  Write a function to find the longest common prefix string amongst an array of strings.
+
+  If there is no common prefix, return an empty string "".
+
+  Approach:
+  
   Intialize prefix as first string and start comparing from second string. 
   For each iteration, compare the length of current prefix and current string. Next, run the loop upto the smallest length.
   Get the new prefix and continue till the last string. **/
