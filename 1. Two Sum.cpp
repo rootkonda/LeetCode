@@ -1,6 +1,6 @@
 /**
    For each element, check if it exists in the map. If it exists, return the appropriate indices. 
-   Otherwise, subtract the element from target sum and store the compliment in map **/
+   Otherwise, subtract the element from target sum and store the compliment in map  **/
 
 subtract each element from target sum and look if that target sum is present 
 class Solution {
