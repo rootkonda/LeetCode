@@ -1,4 +1,10 @@
 /**
+  Implement strStr().
+
+  Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+  
+  Approach:
+  
   Get the substring of needle length from haystack and start the comparison. Each comparison with needle will be a substring
   of haystack starting from index 0. Repeat the process until there is a match or out of chars. 
   Example: substring of haystack from 0-needle.length(), next 1-needle.length() and so on. **/
