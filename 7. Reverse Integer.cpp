@@ -1,4 +1,6 @@
 /**
+  Given a 32-bit signed integer, reverse digits of an integer.
+  
   Simple approach. Initialize res to unit digit and truncate x by last digit. 
   Run a loop until x becomes 0 or no more digits to reverse. Every time multiple by 10 and add the next digit. **/
 class Solution 
