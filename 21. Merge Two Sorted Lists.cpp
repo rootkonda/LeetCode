@@ -1,6 +1,11 @@
 /**
+  Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+  
+  Approach:
+  
   Compare each element in list1 and list2. Whichever is less or equal, make that node's next to NULL and move the pointer
   to the next node. Make sure to store the next node's address before making the node's next to NULL. **/
+  
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2)
