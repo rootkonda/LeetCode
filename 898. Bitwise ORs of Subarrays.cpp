@@ -16,6 +16,9 @@ Idea is to take OR's of all subarrays and save those results but in a bit effici
 // E.g. if OR result of {A[i], A[i-1], A[i-2]} is greater than {A[i], A[i-1]}
 // We can put all the ORs result into a vector, and remember the start and end position of the results of sub arrays end with previous element.
 // So next time we only enumerate the results in this range.
+
+https://leetcode.com/problems/bitwise-ors-of-subarrays/discuss/165859/C%2B%2B-O(kN)-solution
+https://leetcode.com/problems/bitwise-ors-of-subarrays/discuss/166832/C%2B%2B-simplest-fastest-)-(224-ms)
 **/
 
 class Solution {
