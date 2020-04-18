@@ -19,6 +19,7 @@ Idea is to take OR's of all subarrays and save those results but in a bit effici
 
 https://leetcode.com/problems/bitwise-ors-of-subarrays/discuss/165859/C%2B%2B-O(kN)-solution
 https://leetcode.com/problems/bitwise-ors-of-subarrays/discuss/166832/C%2B%2B-simplest-fastest-)-(224-ms)
+https://massivealgorithms.blogspot.com/2018/11/leetcode-898-bitwise-ors-of-subarrays.html
 **/
 
 class Solution {
