@@ -5,7 +5,9 @@ A subsequence of a string is a new string generated from the original string wit
 
 If there is no common subsequence, return 0.
 
+https://www.youtube.com/watch?v=ASoaQq66foQ
 
+2D array with row as one string indices and col as other string indices. Final answer will be at last index of both strings as row and column.
 
 **/
 
