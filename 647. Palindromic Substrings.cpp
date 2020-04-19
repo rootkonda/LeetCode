@@ -46,7 +46,7 @@ public:
             if(i<right)
                 p[i] = min(right-i,p[i_mirror]);
             
-            while(str[i+1+p[i]]==str[i-1-p[i]]) // This gets executed when i==right, otherwise the p[i] will be 0 and the left and right comparisons for elements within the right and left boundary wont make any difference.
+            while(str[i+1+p[i]]==str[i-1-p[i]]) // This gets executed when i==right, otherwise the p[i] will be 0 and the left and right comparisons for elements within the right and left boundary wont make any difference. 
                 p[i]++;
             
             if(i+p[i]>right) // This step executes when i==right and the above while loop calculated center radius.
