@@ -11,6 +11,8 @@ Ref:
 https://leetcode.com/problems/swap-adjacent-in-lr-string/discuss/119647/Easy-to-understand-C%2B%2B-solution-with-detailed-explanation. --- Not entirely correct.
 https://leetcode.com/problems/swap-adjacent-in-lr-string/discuss/231409/C%2B%2B-8ms-beats-100-one-pass-no-extra-memory.-Detailed-explanation! --- Not entirely correct.
 
+
+https://leetcode.com/problems/swap-adjacent-in-lr-string/discuss/612851/Simple-C%2B%2B-Solution-with-explanation
 */
 
 
