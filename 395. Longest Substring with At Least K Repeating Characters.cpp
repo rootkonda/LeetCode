@@ -22,7 +22,7 @@ public:
                 itr++;
             }
             if(itr==count.end()) // if all characters are atleast k
-                ans = max(ans,right-left+1);
+                return max(ans,right-left+1);
             count[s[left]]--; //Since reducing the window size so reduce the frequency of that character
             left++;// reduce the window size
         }
