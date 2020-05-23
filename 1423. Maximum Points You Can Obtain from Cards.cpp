@@ -13,6 +13,8 @@ We have two windows here, say we choose left window of size k i.e. initially we 
 Each iteration we have to remove last element from left window and add the next last element from the back to the sum. We can keep them in left_sum and right_sum.
 Now reduce the size of the left window and right window for next iteration.
 Each iteration check which combination is maximum.
+
+https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/discuss/622167/Ruby-Solution-with-explanation-comments-and-visualization-(two-sliding-windows)
 */
 
 class Solution {
