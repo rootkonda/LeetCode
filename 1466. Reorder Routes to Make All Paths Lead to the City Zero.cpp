@@ -9,7 +9,7 @@ Your task consists of reorienting some roads such that each city can visit the c
 
 It's guaranteed that each city can reach the city 0 after reorder.
 
- 
+ https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/discuss/661710/BFSDFS-but-Slightly-different-approach-Without-visited-remove-edges.
 
 We have keep adding all the outgoing edges ONLY starting from the nodes connected to 0. Whenever we add outgoing edges of a node, then we go to that node and remove its incoming edge. Similarly for all incoming edges remove the outgoing edge of that node. This is to avoid duplicate traversals.
 */
