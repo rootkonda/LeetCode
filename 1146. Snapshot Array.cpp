@@ -14,6 +14,8 @@ int get(index, snap_id) returns the value at the given index, at the time we too
   b. If there is a snap_id of 1 and we look for 0 then we get iterator for 1, which is nothing but the start of the nested map.
   c. If there are two elements 1 and 3 and snap_id is 2, then the iterator will be 3 so we go back and take the value of 1. This is because after 1 we took another snap when it is at same state of 1 so no change hence we do not store anything
      we only have to store the latest snap_id when something is set. Query for any snap_id we have to just get the bigger element and go back once.
+
+https://leetcode.com/problems/snapshot-array/discuss/350656/C%2B%2B-Hash-Map-%2B-Vector
 */
 
 
