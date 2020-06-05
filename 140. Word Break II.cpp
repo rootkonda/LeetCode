@@ -8,6 +8,10 @@ You may assume the dictionary does not contain duplicate words.
 
 For each prefix iterate thru the trie and prepare the list of valid words and add them to vector.
 All possible words starting index i will be stored in a map for that index and we return this vector for the parent call.
+
+https://leetcode.com/problems/word-break-ii/discuss/44262/My-C%2B%2B-DP%2BDFS-solution-(4ms)
+https://leetcode.com/problems/word-break-ii/discuss/507365/C%2B%2B-short-and-fast%3A-DFS-%2B-hash-map-for-DP-(speed-95mem-94)
+
 */
 
 
