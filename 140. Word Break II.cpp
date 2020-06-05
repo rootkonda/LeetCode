@@ -74,3 +74,84 @@ public:
         return search(root,s,0);
     }
 };
+
+
+DFS with MaxLen
+---------------
+class Solution {
+    public:
+        vector<string> wordBreak(string s, vector<string>& wordDict) 
+        {
+            int max_len = 0;
+            unordered_set<string> dict;
+            for(string& str : wordDict)
+            {
+                dict.insert(str);
+                max_len = max(max_len, (int)str.length());
+            }
+
+            unordered_map<int, vector<string>> mp;
+            return break_word(s, 0, dict, max_len, mp);
+        }
+
+    protected:
+        vector<string> break_word(  const string& s, int n, unordered_set<string>& dict, 
+                                    int max_len, unordered_map<int, vector<string>>& mp)
+        {
+            if(mp.count(n)) return mp[n];
+
+            string str;
+            for(int i = n; i < s.length() && str.length() <= max_len; ++i)
+            {
+                str += s[i];
+                if(dict.count(str))
+                {
+                    if(i == s.length()-1)
+                        mp[n].push_back(str);
+                    else
+                    {
+                        vector<string> vs = break_word(s, i+1, dict, max_len, mp);
+                        for(auto& a : vs) mp[n].push_back(str + " " + a);
+                    }
+                }
+            }
+            return mp[n];
+        }
+};
+
+
+DP+DFS+Max and Min Len
+-----------------------
+class Solution {
+private: //DFS path build function
+    void buildPath(bool isBreakable[], string &s, int pos, vector<string> &res, string curP, unordered_set<string>& wordDict, int minlen, int maxlen)
+    {
+        int i, len = s.size();
+        for(i =minlen; i<= min(maxlen, len - pos); ++i)
+            if( isBreakable[pos+i] && wordDict.count(s.substr(pos,i)) ) 
+                if(pos+i == len) res.push_back(curP + s.substr(pos,i));
+                else buildPath(isBreakable, s, pos+i, res, curP + s.substr(pos,i) + " ", wordDict, minlen, maxlen);
+    }
+    
+public:
+    vector<string> wordBreak(string s, unordered_set<string>& wordDict) {
+        int sSize = s.size(), len, i, minlen = INT_MAX, maxlen = INT_MIN;
+        vector<string> res;
+        bool isBreakable[sSize+1];
+        fill_n(isBreakable, sSize+1, false);
+            
+        for (string word : wordDict) { // find the minimum and maximum word length 
+            minlen = min(minlen, (int)word.length());
+            maxlen = max(maxlen, (int)word.length()); 
+        }        
+        //DP to build isBreakable
+        for(i=sSize-minlen, isBreakable[sSize]= true; i>=0; --i)
+            for(len=minlen; len<=min(maxlen, sSize-i); ++len)
+            {
+                if(isBreakable[i+len] && wordDict.count(s.substr(i,len)) ) {isBreakable[i] = true; break;}
+            }
+        //if breakable, do DFS path building
+        if(isBreakable[0]) buildPath(isBreakable, s, 0, res, "", wordDict, minlen, maxlen);
+        return res;
+    }
+};
