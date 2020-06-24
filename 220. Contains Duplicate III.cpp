@@ -4,6 +4,7 @@ Given an array of integers, find out whether there are two distinct indices i an
 Say we are trying to find diff(t)=4 for elements 1,3,9 when k is 3. 9-t(4) = 5 so it means we should find an element which is atleast 5 and max upto 9+t(4) 13.
 If we use multiset then we maintain elements in sorted order at any point and also multiset size should not exceed k. Inorder to find "atleast and upto" we can use lower_bound of nums[i]-t. We use long long because if the input is INT_MAX and when we do nums[i]-t then it will cause overflow.
 
+Whenever the size of set croses k, then we have to remove the oldest element from the set because thats the one which is outside of k window.
 */
 
 typedef long long ll;
