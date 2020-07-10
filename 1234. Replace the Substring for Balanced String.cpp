@@ -7,8 +7,7 @@ Return the minimum length of the substring that can be replaced with any other s
 
 Return 0 if the string is already balanced.
 
- 
-
+https://leetcode.com/problems/replace-the-substring-for-balanced-string/discuss/409052/%22WWEQERQWQWWRWWERQWEQ%22-Why-need-return-4-Anyone-help
 */
 
 
