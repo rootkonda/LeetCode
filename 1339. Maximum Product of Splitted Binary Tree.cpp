@@ -28,7 +28,6 @@ because that will give you wrong result when you look for the maximum value.
 class Solution {
 public:
     long total=0;
-    map<TreeNode*,pair<int,int>> mp;
     long ans = INT_MIN;
     int calSum(TreeNode* root)
     {
@@ -36,22 +35,27 @@ public:
         int lsum=0;
         int rsum=0;
         if(root->left)
-            lsum=root->left->val+calSum(root->left);
+            lsum=root->left->val=root->left->val+calSum(root->left);
         if(root->right)
-            rsum=root->right->val+calSum(root->right);
-        mp[root] = {lsum,rsum};
+            rsum=root->right->val=root->right->val+calSum(root->right);
+        
         return lsum+rsum;
     }
     void helper(TreeNode* root)
     {
-        pair<int,int> pr = mp[root];
-        long lsum = (total-pr.second) * pr.second;
-        long rsum = (long long)(total-pr.first) * pr.first;
-        ans = max(ans,max(lsum,rsum));
+        long lsum = 0;
+        long rsum = 0;
         if(root->left)
+        {
+            lsum = (total-root->left->val) * root->left->val;
             helper(root->left);
+        }
         if(root->right)
-            helper(root->right);
+        {
+             rsum = (total-root->right->val) * root->right->val;
+             helper(root->right);
+        }
+        ans = max(ans,max(lsum,rsum));
     }
     int maxProduct(TreeNode* root) 
     {
