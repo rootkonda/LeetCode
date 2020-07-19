@@ -14,6 +14,8 @@ Suppose B is a copy of A with the value val appended to it.  It is guaranteed th
 
 Return Construct(B).
 
+https://leetcode.com/problems/maximum-binary-tree-ii/discuss/242916/C%2B%2BJava-with-picture-6-lines
+
 Remember that the given value is appended to A list, so it means its added at the end. Hence we have to focus on right subtree.
 If the current node value is smaller than given value then create a new node and current node will be the new node's left child. Or else keep traversing in the right subtree when the given value is lesser than the node's value
 */
