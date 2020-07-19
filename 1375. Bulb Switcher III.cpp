@@ -39,4 +39,4 @@ int numTimesAllBlue(vector<int>& A)
         for (int i = 0; i < n; ++i)
             res += (right = max(right, A[i])) == i + 1;
         return res;
-    }
+}
