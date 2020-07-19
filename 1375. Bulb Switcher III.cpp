@@ -33,7 +33,8 @@ Keep track of max value and check every time if max is i+1 it means we have coll
 https://leetcode.com/problems/bulb-switcher-iii/discuss/532538/JavaC%2B%2BPython-Straight-Forward-O(1)-Space
 */
 
-int numTimesAllBlue(vector<int>& A) {
+int numTimesAllBlue(vector<int>& A) 
+{
         int right = 0, res = 0, n = A.size();
         for (int i = 0; i < n; ++i)
             res += (right = max(right, A[i])) == i + 1;
