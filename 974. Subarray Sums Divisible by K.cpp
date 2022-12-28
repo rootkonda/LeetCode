@@ -21,7 +21,7 @@ public:
         for(int i=0;i<A.size();i++)
         {
             curr +=A[i];
-            int r = (curr%K;
+            int r = (curr%K);
             if(visited.find(r)!=visited.end())
                 count+=visited[r];
             visited[r]++;
